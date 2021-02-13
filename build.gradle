@@ -53,5 +53,7 @@ check.dependsOn jacocoTestReport
 sonarqube {
     properties {
         property "sonar.projectKey", "svendp1988_myfinance"
+        property "sonar.login", "sven.depotter@hotmail.com"
+        property "sonar.password", "Mmsk7kfv"
     }
 }
