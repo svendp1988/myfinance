@@ -1,6 +1,6 @@
 language: java
 jdk:
-  - oraclejdk11
+  - oraclejdk15
 addons:
   sonarcloud:
     organization: "svendp1988"

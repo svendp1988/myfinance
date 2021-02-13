@@ -11,14 +11,11 @@ import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest
-@RunWith(SpringRunner.class)
 public class ExpenseRepositoryTest {
     private Expense expense1;
     private Expense expense2;
     private Expense expense3;
-    @Autowired
-    ExpenseRepository repository;
+    private ExpenseRepository repository;
 
     @Before
     public void setUp() {
@@ -28,6 +25,7 @@ public class ExpenseRepositoryTest {
         expense2.setId("test2");
         expense3 = new Expense(LocalDate.of(2021, 1, 5), 66, ExpenseType.HOUSEHOLD);
         expense3.setId("test3");
+        repository = new ExpenseRepository();
     }
 
     @Test

@@ -8,7 +8,7 @@ plugins {
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '15'
 
 configurations {
     compileOnly {
@@ -49,9 +49,10 @@ jacocoTestReport {
         xml.enabled true
         html.enabled false
     }
+    version {
+        "0.8.6"
+    }
 }
-
-check.dependsOn jacocoTestReport
 
 sonarqube {
     properties {
