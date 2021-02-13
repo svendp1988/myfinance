@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
-class ExpenseRepositoryTest {
+public class ExpenseRepositoryTest {
     private Expense expense1;
     private Expense expense2;
     private Expense expense3;
