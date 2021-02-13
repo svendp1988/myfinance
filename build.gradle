@@ -3,6 +3,7 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
     id 'jacoco'
+    id "org.sonarqube" version "3.1.1"
 }
 
 group = 'com.example'
@@ -48,3 +49,9 @@ jacocoTestReport {
 }
 
 check.dependsOn jacocoTestReport
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "svendp1988_myfinance"
+    }
+}

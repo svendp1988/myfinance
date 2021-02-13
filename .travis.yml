@@ -1,10 +1,16 @@
 language: java
 jdk:
-  - oraclejdk13
+- oraclejdk13
+addons:
+  sonarcloud:
+    organization: "svendp1988"
+    token:
+      secure: SONARCLOUD_TOKEN
 before_script:
   - chmod +x gradlew
 script:
-  - ./gradlew check
+  - "./gradlew check"
+  - "./gradlew sonarqube"
 after_success:
   - if [ -e ./gradlew ]; then ./gradlew jacocoTestReport;else gradle jacocoTestReport;fi
   - bash <(curl -s https://codecov.io/bash)
